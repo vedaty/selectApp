@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sayapp.selectapp.MainActivity">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#ffffff"
+        android:text="@string/hello_world"
+        tools:textSize="50sp" />
+
+    <View
+        android:id="@+id/centerVerticalShim"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/centerHorizontalShim"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/centerVerticalShim"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/s01"
+        android:gravity="center"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/txt1"
+        android:layout_toLeftOf="@+id/centerHorizontalShim"
+        android:layout_toStartOf="@+id/centerHorizontalShim"
+        android:onClick="clicked">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/img2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/centerVerticalShim"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerHorizontalShim"
+        android:gravity="center"
+        android:src="@drawable/s02"
+        android:textColor="#FFFFFF"
+        android:background="#FF0000"
+        android:layout_below="@+id/txt1"
+        android:onClick="clicked">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/img3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/centerVerticalShim"
+        android:layout_toLeftOf="@+id/centerHorizontalShim"
+
+        android:gravity="center"
+        android:src="@drawable/s03"
+        android:textColor="#FFFFFF"
+        android:background="#00FF00"
+        android:layout_above="@+id/adView"
+        android:onClick="clicked">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/img4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/centerVerticalShim"
+        android:layout_toRightOf="@+id/centerHorizontalShim"
+
+        android:gravity="center"
+        android:src="@drawable/s04"
+        android:textColor="#FFFFFF"
+        android:background="#FFFF00"
+        android:layout_above="@+id/adView"
+        android:onClick="clicked">
+    </ImageButton>
+
+
+
+
+    <!-- view for AdMob Banner Ad -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+</RelativeLayout>
