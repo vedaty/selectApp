@@ -6,6 +6,7 @@
 package com.sayapp.selectapp;
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.s05, R.drawable.s06, R.drawable.s07, R.drawable.s08};
     private String[] isim_resources = {"Hangisi Bir?", "Hangisi iki?", "Hangisi üç?", "Hangisi dört?", "Hangisi beş?",
             "Hangisi altı?", "Hangisi yedi?", "Hangisi sekiz?"};
+    private int[] sound_resources = {R.raw.s01,R.raw.s02,R.raw.s03,R.raw.s04,R.raw.s05,R.raw.s06,R.raw.s07,R.raw.s08};
     private int[] excludeRows = {1,3,5,7};
 
     //public ImageButton v1, v2, v3, v4;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     int max = 8;    // random number maximum
     int mean = 4;    // random number mean
 
-
+    MediaPlayer mySound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         t1.setTextSize(25);
         t1.setText(isim_resources[position-1]);
         Toast.makeText(this, "Çocuk Uygulamasına Hoşgeldiniz...", Toast.LENGTH_LONG).show();
+        //mySound = MediaPlayer.create(this, R.raw.s01);
+        mySound = MediaPlayer.create(this, sound_resources[position-1]);
+        mySound.start();
+
 
     }
 
@@ -109,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void refreshIt(){
 
+        mySound = MediaPlayer.create(this, R.raw.ca);
+        mySound.start();
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setCancelable(false);
         builder.setTitle("Doğru cevap");
@@ -153,20 +161,30 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext()," "+p1+" "+p2+" "+p3+" "+p4+" "+position, Toast.LENGTH_LONG).show();
                 if (position==1) {
                     t1.setText(isim_resources[p1-1]);
+                    mySound = MediaPlayer.create(getApplicationContext(), sound_resources[p1-1]);
+                    mySound.start();
                 }
 
                 if (position==2) {
                     t1.setText(isim_resources[p2-1]);
+                    mySound = MediaPlayer.create(getApplicationContext(), sound_resources[p2-1]);
+                    mySound.start();
                 }
 
                 if (position==3) {
                     t1.setText(isim_resources[p3-1]);
+                    mySound = MediaPlayer.create(getApplicationContext(), sound_resources[p3-1]);
+                    mySound.start();
                 }
 
                 if (position==4) {
                     t1.setText(isim_resources[p4-1]);
+                    mySound = MediaPlayer.create(getApplicationContext(), sound_resources[p4-1]);
+                    mySound.start();
                 }
 
+
+                // mySound.start();
 
             }
 
