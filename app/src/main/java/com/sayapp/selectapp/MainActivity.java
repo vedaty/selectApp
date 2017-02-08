@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
                     refreshIt(); }
              else {
                 b1.setImageResource(R.drawable.x);
+                mySound = MediaPlayer.create(this, R.raw.err);
+                mySound.start();
             }
             }
 
@@ -91,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
                 refreshIt(); }
             else {
                 b2.setImageResource(R.drawable.x);
+                mySound = MediaPlayer.create(this, R.raw.err);
+                mySound.start();
             }
         }
 
@@ -99,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 refreshIt(); }
             else {
                 b3.setImageResource(R.drawable.x);
+                mySound = MediaPlayer.create(this, R.raw.err);
+                mySound.start();
             }
         }
 
@@ -107,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 refreshIt(); }
             else {
                 b4.setImageResource(R.drawable.x);
+                mySound = MediaPlayer.create(this, R.raw.err);
+                mySound.start();
             }
         }
 
