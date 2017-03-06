@@ -27,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
     // Remove the below line after defining your own ad unit ID.
     private static final String TOAST_TEXT = "Test ads are being shown. "
             + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
-    private int[] image_resources = {R.drawable.s01, R.drawable.s02, R.drawable.s03, R.drawable.s04,
-            R.drawable.s05, R.drawable.s06, R.drawable.s07, R.drawable.s08};
-    private String[] isim_resources = {"Hangisi Bir?", "Hangisi iki?", "Hangisi üç?", "Hangisi dört?", "Hangisi beş?",
-            "Hangisi altı?", "Hangisi yedi?", "Hangisi sekiz?"};
-    private int[] sound_resources = {R.raw.s01,R.raw.s02,R.raw.s03,R.raw.s04,R.raw.s05,R.raw.s06,R.raw.s07,R.raw.s08};
+    private int[] image_resources = {R.drawable.r01, R.drawable.r02, R.drawable.r03, R.drawable.r04,
+            R.drawable.r05, R.drawable.r06, R.drawable.r07, R.drawable.r08, R.drawable.r09, R.drawable.r10,
+            R.drawable.r11, R.drawable.r12, R.drawable.r13, R.drawable.r14, R.drawable.r15,
+            R.drawable.r16, R.drawable.r17};
+    private String[] isim_resources = {"Ağlayan robot", "Üzgün robot", "Mutlu robot", "Korkmuş robot", "Utangaç robot",
+            "Şakacı robot", "Hasta robot", "Kızgın robot", "Aşık robot", "Kahkahacı robot", "Yorgun robot",
+            "Uyuyan robot", "Gururlu robot", "Şaşkın robot", "Kuşkucu robot", "Sıkılmış robot", "İfadesiz robot"};
+    private int[] sound_resources = {R.raw.t01,R.raw.t02,R.raw.t03,R.raw.t04,R.raw.t05,R.raw.t06,R.raw.t07,R.raw.t08,
+            R.raw.t09,R.raw.t10,R.raw.t11,R.raw.t12,R.raw.t13,R.raw.t14,R.raw.t15,R.raw.t16,R.raw.t17};
     private int[] excludeRows = {1,3,5,7};
 
     //public ImageButton v1, v2, v3, v4;
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     int min = 1;    // random number minimum
-    int max = 8;    // random number maximum
+    int max = 17;    // random number maximum
     int mean = 4;    // random number mean
 
     MediaPlayer mySound;
@@ -60,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
         //Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show();
         t1 = (TextView) findViewById(R.id.txt1);
-        t1.setTextSize(25);
+        t1.setTextSize(15);
         t1.setText(isim_resources[position-1]);
-        Toast.makeText(this, "Çocuk Uygulamasına Hoşgeldiniz...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Duygusal Robot Uygulamasına Hoşgeldiniz...", Toast.LENGTH_LONG).show();
         //mySound = MediaPlayer.create(this, R.raw.s01);
         mySound = MediaPlayer.create(this, sound_resources[position-1]);
         mySound.start();
@@ -238,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_settings) {
             // shows the about message
-            Toast toast=Toast.makeText(this, "Bu uygulama ... için ücretsiz olarak hizmete sunulmuştur.",Toast.LENGTH_LONG);
+            Toast toast=Toast.makeText(this, "Duygusal Robot uygulaması çocukların duyguları tanımlayabilmesi için eğlence amaçlı olarak geliştirilmiş ve ücretsiz olarak hizmete sunulmuştur.",Toast.LENGTH_LONG);
             toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 300);
             toast.setDuration(Toast.LENGTH_LONG);
             toast.show();

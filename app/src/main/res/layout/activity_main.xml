@@ -9,10 +9,10 @@
         android:id="@+id/txt1"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="32dp"
         android:textColor="#ffffff"
         android:text="@string/hello_world"
-        tools:textSize="50sp" />
+        tools:textSize="20sp" />
 
     <View
         android:id="@+id/centerVerticalShim"
@@ -34,7 +34,9 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/centerVerticalShim"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/s01"
+        android:src="@drawable/r01"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:gravity="center"
         android:background="#0000FF"
         android:textColor="#FFFFFF"
@@ -53,7 +55,9 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/centerHorizontalShim"
         android:gravity="center"
-        android:src="@drawable/s02"
+        android:src="@drawable/r02"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:textColor="#FFFFFF"
         android:background="#FF0000"
         android:layout_below="@+id/txt1"
@@ -69,7 +73,9 @@
         android:layout_toLeftOf="@+id/centerHorizontalShim"
 
         android:gravity="center"
-        android:src="@drawable/s03"
+        android:src="@drawable/r03"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:textColor="#FFFFFF"
         android:background="#00FF00"
         android:layout_above="@+id/adView"
@@ -85,7 +91,9 @@
         android:layout_toRightOf="@+id/centerHorizontalShim"
 
         android:gravity="center"
-        android:src="@drawable/s04"
+        android:src="@drawable/r04"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:textColor="#FFFFFF"
         android:background="#FFFF00"
         android:layout_above="@+id/adView"
